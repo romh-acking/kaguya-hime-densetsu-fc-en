@@ -288,7 +288,7 @@ JSR $9C02
 // NES address: $0E:9B58
 org $1B68
 db "                     "
-db $40,"VICTOR MUSICAL INC",$41," "
+db $40,"VICTOR MUSICAL IND",$41," "
 
 //------------------
 // Move Cursor to the right
