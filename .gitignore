@@ -1,0 +1,6 @@
+*.db
+*.deb
+*.lnk
+*.db:encryptable
+*.deb
+*.cdl

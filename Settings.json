@@ -1,0 +1,211 @@
+{
+  "spiroVersion": 3,
+  "files": {
+    "Original": ".\\roms\\Kaguya Hime Densetsu (Japan).nes",
+    "New": ".\\roms\\Kaguya Hime Densetsu (NEW).nes"
+  },
+  "scripts": {
+    "scriptPath": ".\\script\\script.json",
+    "original": true,
+    "comment": true,
+    "new": true,
+    "bytes": false,
+    "menu": true,
+    "proof": true
+  },
+  "misc": {
+    "blankOutTextDataAfterRead": false,
+    "blankOutByte": "0x62",
+    "multiplePointersReferencingAString": true
+  },
+  "scriptManager": {
+    "writeScript": "",
+    "displayReplace": [
+      {
+        "find": "\\[LINE\\]",
+        "replace": "\r\n"
+      },
+      {
+        "find": "\\[NAME\\]",
+        "replaceOld": "忠",
+        "replaceNew": "NINTEN"
+      },
+      {
+        "find": "\\[Left Parenthesis\\]",
+        "replace": "（"
+      },
+      {
+        "find": "\\[Right Parenthesis\\]",
+        "replace": "）"
+      },
+      {
+        "find": "\\[.*?\\]",
+        "replace": ""
+      }
+    ]
+  },
+  "pointers": {
+    "read": {
+      "Bank 1": {
+        "file": "Original",
+        "pointerFormat": {
+          "addresses": [
+            "0x28010"
+          ],
+          "pcDifference": "+0x20010",
+          "addressConversion": "None",
+          "entryNumber": 480,
+          "pointerType": 1,
+          "pointerLength": 2,
+          "storeOutOfOrderToSaveSpace": true,
+          "subentryKeyPrefix": "dialogue"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "Delimiters": [
+            "[STOP]"
+          ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [
+            "CHR"
+          ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 184,
+          "autoLineBreak": "TokimekiMihoMessage",
+          "storeOutOfOrderToSaveSpace": true,
+          "squishyTextFile": ".\\tables\\SquishyText"
+        }
+      },
+      "Bank 2": {
+        "file": "Original",
+        "pointerFormat": {
+          "addresses": [
+            "0x3E1E9"
+          ],
+          "pcDifference": "+0x30010",
+          "addressConversion": "None",
+          "entryNumber": 94,
+          "pointerType": 1,
+          "pointerLength": 2,
+          "storeOutOfOrderToSaveSpace": true,
+          "subentryKeyPrefix": "menu"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "Delimiters": [
+            "[STOP]"
+          ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [
+            "CHR"
+          ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 0,
+          "autoLineBreak": "None",
+          "squishyTextFile": ".\\tables\\SquishyText"
+        }
+      }
+    },
+    "write": {
+      "Bank 1": {
+        "file": "Original",
+        "pointerFormat": {
+          "addresses": [
+            "0x28010"
+          ],
+          "pcDifference": "+0x40010",
+          "addressConversion": "None",
+          "entryNumber": 480,
+          "pointerType": "MoonPrincessTrans",
+          "pointerLength": 4,
+          "storeOutOfOrderToSaveSpace": true,
+          "subentryKeyPrefix": "dialogue"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "Delimiters": [
+            "[STOP]"
+          ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [
+            "CHR"
+          ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 176,
+          "autoLineBreak": "TokimekiMihoMessage",
+          "storeOutOfOrderToSaveSpace": true,
+          "squishyTextFile": ".\\tables\\SquishyText"
+        }
+      },
+      "Bank 2": {
+        "file": "Original",
+        "pointerFormat": {
+          "addresses": [
+            "0x3E1E9"
+          ],
+          "pcDifference": "+0x40010",
+          "addressConversion": "None",
+          "entryNumber": 94,
+          "pointerType": "MoonPrincessTrans",
+          "pointerLength": 4,
+          "storeOutOfOrderToSaveSpace": false,
+          "subentryKeyPrefix": "menu"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "Delimiters": [
+            "[STOP]"
+          ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [
+            "CHR"
+          ],
+          "isDictionary": false,
+          "chrFile": ".\\tables\\CHR",
+          "mirrorBlankDictionaryEntries": false,
+          "pixelsPerLine": 0,
+          "autoLineBreak": "None",
+          "squishyTextFile": ".\\tables\\SquishyText"
+        }
+      }
+    }
+  },
+  "write": {
+    "writeableRange": {
+      "Expanded Range #1 (New)": {
+        "file": "New",
+        "startAddress": "0x40010",
+        "size": "0x4000"
+      },
+      "Expanded Range #2 (New)": {
+        "file": "New",
+        "startAddress": "0x44010",
+        "size": "0x4000"
+      },
+      "Expanded Range #3 (New)": {
+        "file": "New",
+        "startAddress": "0x48010",
+        "size": "0x4000"
+      }
+    },
+    "writeRegion": [
+      {
+        "entryOwners": [
+          "Bank 1",
+          "Bank 2"
+        ],
+        "writeableAddressRanges": [
+          "Expanded Range #1 (New)",
+          "Expanded Range #2 (New)",
+          "Expanded Range #3 (New)"
+        ]
+      }
+    ]
+  }
+}
