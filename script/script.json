@@ -114,7 +114,7 @@
                   "text": {
                     "Original": "[NAME]にとって　ヤクにたちそうな　モノは[LINE]なにもない。[STOP]",
                     "New": "[NAME] found nothing useful.[STOP]",
-                    
+                    "Comment": "",
                     "Menu": "General action text",
                     "Proof": "[NAME] searches[LINE]to no avail.  [STOP]"
                   }
@@ -1335,7 +1335,7 @@
                 "dialogue_000102": {
                   "text": {
                     "Original": "「ノンチを　いじめていた　ショウネンの[LINE]　ボウを　もっていた　ては？」[LINE]１、ミギて　２、ヒダリて[STOP]",
-                    "New": "“Which of the boys bullying Nonchi was holding a club?”[LINE]1.Right one[LINE]2.Left one[STOP]",
+                    "New": "“In which hand was the bully holding the club?”[LINE]1.Right hand[LINE]2.Left hand[STOP]",
                     "Comment": "",
                     "Menu": "21. Sea Maze – Minigame",
                     "Proof": "「Which boy was[LINE]hitting Nonchi?」[LINE]1．Right  2．Left [STOP]"
@@ -2856,7 +2856,7 @@
                 "dialogue_000219": {
                   "text": {
                     "Original": "まえに　いどう　すると　およげそうな　ウミだ。[STOP]",
-                    "New": "It looks calm enough to swim in. Move Up to do so.[STOP]",
+                    "New": "It looks calm enough to swim in. Move Forward to do so.[STOP]",
                     "Comment": "",
                     "Menu": "7. Shore",
                     "Proof": "The deep blue sea rolls[STOP]"
@@ -5184,7 +5184,7 @@
                 "dialogue_000398": {
                   "text": {
                     "Original": "「みほとけの　しもべ　として[LINE]　こどもの　ころから　ここに　います。」[STOP]",
-                    "New": "“I served Lord Buddha since my early childhood.”[STOP]",
+                    "New": "“I've served Lord Buddha since my early childhood.”[STOP]",
                     "Comment": "",
                     "Menu": "19. Nun",
                     "Proof": "「I served Buddha[LINE]since childhood.」 [STOP]"

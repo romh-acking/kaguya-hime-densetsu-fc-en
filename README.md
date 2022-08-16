@@ -44,6 +44,8 @@ The tools are coded in C#. You'll have to mess with Wine if you want them to run
 * To generate an NES rom file with the translation and patches included execute the bat file "Write.bat" by double clicking it.
 
 ## Changelog
+* 2022 Auguest 16th: 1.1
+	* Changes to three lines: one for grammar, one for script consistency, and one was to fix a mistranslation that was missed it snark's old translation (for one of the quiz questions)
 * 2022 July 31st: 1.0
     * Initial release
 
