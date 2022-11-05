@@ -1597,6 +1597,7 @@ lsr
 sta $a000
 lsr
 sta $a000
+
 rts
 
 // A MMC1 512KB mapper treats the latter half of the rom as a seperate rom
@@ -1674,6 +1675,11 @@ lda #$06
 jsr Rom2BankSwitchFnc
 jmp SwitchToRom1
 
+// I could port all the code from $C000 here (which was previously referenced in rom1), but it's easier to skip it
+// It's just for printing screen frames, it's hardly noticable if we drop a frame.
+PrintScreenFrame:
+  rti
+
 org $3FBC; base $FFAC // 0x3FFC4
 Rom2BankSwitchFnc:
   lda $66
@@ -1711,14 +1717,7 @@ sta $a000
 org $3D77; base $FD67 // 0x7FD77
 jmp TranscribeText
 
-
-
-
-// The game normally NMIs to $C082
-// This becomes a problem when switching to the "second" rom
-// An NMI (which can't be surpressed), will jump to $FFFF if we take too long
-// in the second rom (reading a long string).
-// My hacky solution, is to kill the NMI at where it jumps
+// Update the interrupt vectors for rom2
 header
-org $3FFF; base $ffff 
-rti
+org $3FFA; base $fffa
+db PrintScreenFrame&$FF,PrintScreenFrame>>8&$FF
